@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360" viewBox="0 0 800 360" role="img" aria-label="Work per unit of quota, relative to Opus = 1x">
+<text x="400.0" y="34" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#8b949e">Work per unit of quota, relative to Opus = 1x</text>
+<text x="236" y="95.6" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#8b949e">Opus</text>
+<rect x="250" y="70" width="15.9" height="40" rx="5" fill="#a78bfa"/>
+<text x="275.9" y="95.6" font-family="Consolas,Courier New,monospace" font-size="16" font-weight="700" fill="#8b949e">1x</text>
+<text x="236" y="150.6" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#8b949e">Sonnet</text>
+<rect x="250" y="125" width="31.9" height="40" rx="5" fill="#f59e0b"/>
+<text x="291.9" y="150.6" font-family="Consolas,Courier New,monospace" font-size="16" font-weight="700" fill="#8b949e">about 2x</text>
+<text x="236" y="205.6" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#8b949e">Haiku, context above 100k</text>
+<rect x="250" y="180" width="87.6" height="40" rx="5" fill="#2dd4bf"/>
+<text x="347.6" y="205.6" font-family="Consolas,Courier New,monospace" font-size="16" font-weight="700" fill="#8b949e">about 5.5x</text>
+<text x="236" y="260.6" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#8b949e">Haiku, context up to 100k</text>
+<rect x="250" y="235" width="430.0" height="40" rx="5" fill="#2dd4bf"/>
+<text x="690.0" y="260.6" font-family="Consolas,Courier New,monospace" font-size="16" font-weight="700" fill="#8b949e">about 27x</text>
+<text x="400.0" y="338" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" fill="#8b949e">measured on one account over 30 days — see docs/cost-map.md</text>
+</svg>

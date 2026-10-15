@@ -1,0 +1,10 @@
+{
+  "name": "swarmtier",
+  "version": "0.1.0",
+  "description": "Cost-aware dispatch for Claude Code: your top model plans, Haiku does the volume, your quota lasts the week. Dispatch line, effort enforcement, cold-cache warning, lesson memory and a Haiku swarm splitter.",
+  "author": { "name": "swarmtier contributors" },
+  "license": "MIT",
+  "keywords": ["claude-code", "subagents", "cost", "quota", "haiku", "routing", "effort"],
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json"
+}

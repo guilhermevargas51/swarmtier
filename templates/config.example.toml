@@ -1,0 +1,29 @@
+# swarmtier configuration (example)
+# Copy to `swarmtier.toml` in your project root, or to ~/.config/swarmtier/config.toml.
+# Every key is optional; the values below are the defaults.
+
+# Minutes of idle time after which the prompt cache is considered cold.
+# The cold-cache hook warns when a session returns after this gap, because the
+# next message pays a rewrite of the whole conversation. Match your plan's cache TTL.
+cache_ttl_minutes = 60
+
+# Maximum tokens of material per swarm agent (core/swarm_split.py).
+# Keep it well under 100k: above ~100k of context you get ~5x less work per unit of quota (see docs/cost-map.md).
+swarm_max_tokens = 60000
+
+# Maximum number of past lessons the lesson-inject hook adds to one prompt.
+lessons_per_prompt = 3
+
+# require-effort refuses effort=max for these models (cost explodes for a modest index gain; compare the Sonnet rows in docs/cost-map.md, section 1)
+forbid_max_for = ["sonnet"]
+
+# At the end of a turn, remind to /compact before leaving only when context is above this size
+cache_watch_min_tokens = 100000
+
+# Agent names the require-effort hook ignores (they may be dispatched without `effort`).
+# Example: exempt_agents = ["vision-reader"]
+exempt_agents = []
+
+# Where swarmtier keeps its state (ledger, lessons, session timestamps).
+# Optional. If unset, a `.swarmtier/` folder inside the project is used.
+# data_dir = "~/.local/share/swarmtier"

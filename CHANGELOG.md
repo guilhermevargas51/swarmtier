@@ -1,0 +1,20 @@
+# Changelog
+
+Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follow [SemVer](https://semver.org/).
+
+## [0.1.0] - 2026-10-15
+
+First public release.
+
+### Added
+- Claude Code plugin manifest and marketplace entry (`.claude-plugin/`).
+- Hooks: `require-effort` (blocks dispatch without `effort`, refuses `max` on Sonnet), `delegation-ledger`,
+  `cold-cache`, `cold-cache-watch`, `lesson-inject`, `lesson-capture`, `user-correction`.
+- Core: `core.quota` (manual reading from `/usage`, with age), `core.swarm_split` (batches under a token ceiling),
+  `core.learning` (lesson store and search), `core.ledger`, `core.config`.
+- Agents: `triage` (Haiku), `executor` (Sonnet), `vision-reader` (Sonnet).
+- Skills: `dispatch-by-cost`, `swarm-split`, `improve-skills`.
+- Templates: orchestrator `CLAUDE.md` and `config.example.toml`.
+- Docs: architecture, dispatch line, cost map, scenarios, FAQ.
+- `scripts/pii_scan.py` personal-data scan, run in CI with the test suite.
+- README in English and Brazilian Portuguese, CONTRIBUTING, SECURITY.

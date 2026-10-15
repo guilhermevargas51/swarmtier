@@ -1,0 +1,12 @@
+{
+  "name": "swarmtier",
+  "description": "Marketplace for swarmtier, a cost-aware dispatch plugin for Claude Code",
+  "owner": { "name": "swarmtier contributors" },
+  "plugins": [
+    {
+      "name": "swarmtier",
+      "source": "./",
+      "description": "Dispatch subagents by cost: dispatch line, effort enforcement, cold-cache warning, lesson memory, Haiku swarm splitter"
+    }
+  ]
+}

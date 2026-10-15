@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"/>
+<meta name="viewport" content="width=1280, height=320"/>
+<script src="gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1280px;height:320px;overflow:hidden;background:#ffffff}
+#root{position:relative;width:1280px;height:320px;background:#ffffff;display:flex;align-items:center;
+justify-content:space-between;padding:0 72px;font-family:'Segoe UI',Arial,Helvetica,sans-serif}
+h1{font-size:88px;font-weight:800;letter-spacing:-2px;color:#0d1117;line-height:1}
+p{font-size:27px;color:#57606a;line-height:1.3;margin-top:14px;font-weight:500}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="1" data-width="1280" data-height="320">
+<div><h1>swarmtier</h1><p>Your Opus plans. Haiku does the volume.<br>Your quota lasts the week.</p></div>
+<div style="display:flex;flex-direction:column;gap:13px;width:330px"><div style="display:flex;justify-content:center;gap:0px"><div style="width:120px;height:35px;background:#a78bfa;border-radius:4px"></div></div><div style="display:flex;justify-content:center;gap:8px"><div style="width:90px;height:27px;background:#f59e0b;border-radius:4px"></div><div style="width:90px;height:27px;background:#f59e0b;border-radius:4px"></div><div style="width:90px;height:27px;background:#f59e0b;border-radius:4px"></div></div><div style="display:flex;justify-content:center;gap:5px"><div style="width:27px;height:21px;background:#2dd4bf;border-radius:4px"></div><div style="width:27px;height:21px;background:#2dd4bf;border-radius:4px"></div><div style="width:27px;height:21px;background:#2dd4bf;border-radius:4px"></div><div style="width:27px;height:21px;background:#2dd4bf;border-radius:4px"></div><div style="width:27px;height:21px;background:#2dd4bf;border-radius:4px"></div><div style="width:27px;height:21px;background:#2dd4bf;border-radius:4px"></div><div style="width:27px;height:21px;background:#2dd4bf;border-radius:4px"></div><div style="width:27px;height:21px;background:#2dd4bf;border-radius:4px"></div><div style="width:27px;height:21px;background:#2dd4bf;border-radius:4px"></div><div style="width:27px;height:21px;background:#2dd4bf;border-radius:4px"></div></div></div>
+
+</div>
+<script>
+const tl = gsap.timeline({paused:true});
+tl.to("#root",{opacity:1,duration:1},0);
+window.__timelines["main"] = tl; tl.seek(0);
+</script></body></html>

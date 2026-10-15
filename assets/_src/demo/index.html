@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"/>
+<meta name="viewport" content="width=880, height=560"/>
+<script src="gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:880px;height:560px;overflow:hidden;background:#0d1117}
+#root{width:880px;height:560px;background:#0d1117;font-family:Consolas,'Courier New',monospace;font-size:14px;color:#c9d1d9}
+#bar{height:34px;background:#161b22;border-bottom:1px solid #30363d;display:flex;align-items:center;padding:0 14px;gap:8px;
+font-family:'Segoe UI',Arial,sans-serif;font-size:13px;color:#8b949e}
+.dot{width:11px;height:11px;border-radius:50%}
+#term{padding:14px 20px;line-height:19px;font-variant-ligatures:none}
+.l{opacity:0;min-height:19px;white-space:pre-wrap}
+.amber{color:#f59e0b}.teal{color:#2dd4bf}.violet{color:#a78bfa}.dim{color:#8b949e}.red{color:#ff7b72}
+.done{opacity:0}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="14" data-width="880" data-height="560">
+<div id="bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span style="margin-left:10px">swarmtier - demo</span></div>
+<div id="term">
+<div class="l" id="p"><span class="violet">&gt; </span><span id="pt"></span></div>
+<div class="l amber" id="b0">DISPATCH WITHOUT EFFORT. Choose model + effort for THIS task and repeat the call:</div>
+<div class="l" id="b1">  extract / count / list / summarize        -&gt; model haiku,  effort low</div>
+<div class="l" id="b2">  classify against a ready criterion        -&gt; haiku,        effort medium</div>
+<div class="l" id="b3">  check an edge case                        -&gt; haiku,        effort high</div>
+<div class="l" id="b4">  ...</div>
+<div class="l amber" id="b5">Write the dispatch line first: scenario - quota - agent/model + effort - why - who reviews.</div>
+<div class="l" id="gap1">&nbsp;</div>
+<div class="l" id="d0"><span class="violet">&gt; </span><span id="dt"></span></div>
+<div class="l" id="gap2">&nbsp;</div>
+<div id="rows"></div>
+<div class="l" id="gap3">&nbsp;</div>
+<div class="l red" id="e0">LESSONS LEARNED - we already got this wrong before. Read before acting:</div>
+<div class="l" id="e1">  - [inline python in heredoc] heredoc python breaks on Windows quoting; write a temp .py file instead</div>
+</div>
+</div>
+<script>
+const tl = gsap.timeline({paused:true});
+const show = (sel,t)=>tl.set(sel,{opacity:1},t);
+function type(sel, text, t, dur){
+  const el=document.querySelector(sel), o={p:0};
+  tl.to(o,{p:1,duration:dur,ease:"none",onUpdate:()=>{el.textContent=text.slice(0,Math.round(o.p*text.length));}},t);
+}
+// (a) call without effort
+show("#p",0.3);
+type("#pt",'Agent(triage, "classify batch 1..10")',0.3,1.4);
+["#b0","#b1","#b2","#b3","#b4","#b5"].forEach((s,i)=>show(s,2.2+i*0.35));
+// (b) dispatch line
+show("#gap1",4.5); show("#d0",4.6);
+type("#dt","Scenario A · 5h 32% / week 58% (1.4x pace) · -> triage/Haiku + low · 10 batches, checkable · reviewed by script",4.6,2.6);
+// (c) parallel rows
+show("#gap2",7.4);
+const rows=document.getElementById("rows");
+for(let i=1;i<=10;i++){
+  const n=String(i).padStart(2,"0");
+  const d=document.createElement("div"); d.className="l"; d.id="r"+i;
+  d.innerHTML='<span class="teal">triage (haiku, low)</span> batch '+n+' … <span class="done teal" id="ok'+i+'">done</span>';
+  rows.appendChild(d);
+  show("#r"+i,7.5+i*0.06);
+  tl.set("#ok"+i,{opacity:1},8.4+((i*37)%10)*0.08);
+}
+// (d) lesson
+show("#gap3",9.7); show("#e0",9.9); show("#e1",10.4);
+tl.to({}, {duration:0.1}, 13.9);
+window.__timelines["main"] = tl; tl.seek(0);
+</script></body></html>

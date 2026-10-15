@@ -176,9 +176,6 @@ More in [docs/faq.md](docs/faq.md). Worked examples with commands: [examples/REA
 
 One pull request, one change. Run the tests and the privacy scan first. Details in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Star history
-
-[![Star History Chart](https://api.star-history.com/svg?repos=guilhermevargas51/swarmtier&type=Date)](https://star-history.com/#guilhermevargas51/swarmtier&Date)
 
 ## License
 

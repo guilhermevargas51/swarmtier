@@ -178,9 +178,6 @@ Mais em [docs/faq.md](docs/faq.md) (inglês). Exemplos passo a passo com comando
 
 Um pull request, uma mudança. Rode os testes e a varredura de privacidade antes. Detalhes em [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Histórico de estrelas
-
-[![Star History Chart](https://api.star-history.com/svg?repos=guilhermevargas51/swarmtier&type=Date)](https://star-history.com/#guilhermevargas51/swarmtier&Date)
 
 ## Licença
 

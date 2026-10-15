@@ -109,20 +109,27 @@ def _mini_toml(text: str) -> dict:
             continue
         key, _, val = line.partition("=")
         val = val.strip()
-        if val.lower() in ("true", "false"):
-            parsed: object = val.lower() == "true"
-        elif len(val) >= 2 and val[0] == val[-1] and val[0] in "\"'":
-            parsed = val[1:-1]
+        if val.startswith("[") and val.endswith("]"):
+            inner = val[1:-1].strip()
+            parsed: object = [_mini_scalar(v.strip()) for v in inner.split(",") if v.strip()] if inner else []
         else:
-            try:
-                parsed = int(val)
-            except ValueError:
-                try:
-                    parsed = float(val)
-                except ValueError:
-                    parsed = val
+            parsed = _mini_scalar(val)
         cur[key.strip()] = parsed
     return out
+
+
+def _mini_scalar(val: str) -> object:
+    if val.lower() in ("true", "false"):
+        return val.lower() == "true"
+    if len(val) >= 2 and val[0] == val[-1] and val[0] in "\"'":
+        return val[1:-1]
+    try:
+        return int(val.replace("_", ""))
+    except ValueError:
+        try:
+            return float(val)
+        except ValueError:
+            return val
 
 
 def _merge(base: dict, over: dict) -> dict:

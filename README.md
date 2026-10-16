@@ -27,6 +27,8 @@ In the usage data below, very little of the bill is the model thinking. Measured
 
 These are proportions from one account. Your mileage will vary; [measure your own](docs/cost-map.md#5-how-to-measure-your-own).
 
+In [How We Build Effective Agents](https://ai.engineer/talks/effective-ai-agents), Barry Zhang (Anthropic) leaves budget-awareness as an open question: how do you explain and enforce a time, money or token budget to an agent? swarmtier is one practical answer for Claude Code. Every dispatch must state its effort, the quota reading carries its age, and swarms are sized to stay under the small-model ceiling.
+
 ## Quick start
 
 ```

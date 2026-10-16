@@ -27,7 +27,7 @@ Nos dados de uso abaixo, quase nada da conta é o modelo pensando. Medido em uma
 
 São proporções de uma conta só. O seu resultado vai variar; [meça o seu](docs/cost-map.md#5-how-to-measure-your-own).
 
-Na palestra [How We Build Effective Agents](https://www.youtube.com/watch?v=D7_ipDqhtwk), Barry Zhang (Anthropic) deixa a noção de orçamento como questão em aberto: como explicar e impor a um agente um limite de tempo, dinheiro ou tokens? O swarmtier é uma resposta prática para o Claude Code. Todo despacho declara o effort, a leitura da cota traz a idade, e o enxame é dimensionado para ficar abaixo do teto do modelo pequeno.
+Na palestra [How We Build Effective Agents](https://ai.engineer/talks/effective-ai-agents), Barry Zhang (Anthropic) deixa a noção de orçamento como questão em aberto: como explicar e impor a um agente um limite de tempo, dinheiro ou tokens? O swarmtier é uma resposta prática para o Claude Code. Todo despacho declara o effort, a leitura da cota traz a idade, e o enxame é dimensionado para ficar abaixo do teto do modelo pequeno.
 
 ## Início rápido
 

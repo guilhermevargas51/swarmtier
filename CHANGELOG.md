@@ -2,6 +2,15 @@
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follow [SemVer](https://semver.org/).
 
+## [0.1.1] - 2026-10-16
+
+### Fixed
+- `core.config`: the Python 3.10 TOML fallback read list values such as `forbid_max_for = ["sonnet"]` as a string; it now parses them as lists.
+
+### Docs
+- README (EN and pt-BR) cites Barry Zhang's talk "How We Build Effective Agents", which leaves budget-awareness as an open question.
+- Star history chart hidden until the repository has stars.
+
 ## [0.1.0] - 2026-10-15
 
 First public release.

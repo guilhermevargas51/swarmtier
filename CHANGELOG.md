@@ -2,6 +2,17 @@
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follow [SemVer](https://semver.org/).
 
+## [0.2.0] - 2026-10-16
+
+### Added
+- `dashboard/`: local live board of the dispatch ledger (`python -m dashboard`, stdlib only, 127.0.0.1, light/dark theme, fullscreen).
+- `examples/ledger-sample.jsonl`: sample ledger for the demo and the tests.
+- `tests/test_dashboard.py`: reducer and server tests.
+
+### Changed
+- `core.config`: new `dashboard_port` key (default 8790).
+- `.gitignore`: keeps `examples/ledger-sample.jsonl` while ignoring other `*.jsonl`.
+
 ## [0.1.1] - 2026-10-16
 
 ### Fixed

@@ -1,0 +1,35 @@
+{"ts": "2026-10-16T09:02:10", "task_id": "t-101", "event": "created", "role": "executor", "model": "sonnet", "note": "Add retry with backoff to the HTTP client", "effort": "medium"}
+{"ts": "2026-10-16T09:02:11", "task_id": "t-101", "event": "assigned", "role": "executor", "model": "sonnet", "effort": "medium"}
+{"ts": "2026-10-16T09:02:12", "task_id": "t-101", "event": "started", "role": "executor", "model": "sonnet", "effort": "medium"}
+{"ts": "2026-10-16T09:40:55", "task_id": "t-101", "event": "artifact_ready", "role": "executor", "model": "sonnet", "note": "patch + 6 new tests"}
+{"ts": "2026-10-16T09:05:00", "task_id": "t-102", "event": "created", "role": "triage", "model": "haiku", "note": "Summarize the 12 failing CI logs", "effort": "low"}
+{"ts": "2026-10-16T09:05:01", "task_id": "t-102", "event": "assigned", "role": "triage", "model": "haiku", "effort": "low"}
+{"ts": "2026-10-16T09:05:02", "task_id": "t-102", "event": "started", "role": "triage", "model": "haiku", "effort": "low"}
+{"ts": "2026-10-16T09:12:30", "task_id": "t-102", "event": "completed", "role": "triage", "model": "haiku", "note": "3 root causes, 9 duplicates"}
+{"ts": "2026-10-16T10:15:00", "task_id": "t-103", "event": "created", "role": "triage", "model": "haiku", "note": "Classify 40 open issues by area", "effort": "medium"}
+{"ts": "2026-10-16T10:15:01", "task_id": "t-103", "event": "assigned", "role": "triage", "model": "haiku", "effort": "medium"}
+{"ts": "2026-10-16T10:15:02", "task_id": "t-103", "event": "started", "role": "triage", "model": "haiku", "effort": "medium"}
+{"ts": "2026-10-16T10:30:00", "task_id": "t-104", "event": "created", "role": "executor", "model": "sonnet", "note": "Migrate the config loader to TOML", "effort": "medium"}
+{"ts": "2026-10-16T10:30:01", "task_id": "t-104", "event": "assigned", "role": "executor", "model": "sonnet", "effort": "medium"}
+{"ts": "2026-10-16T10:30:02", "task_id": "t-104", "event": "started", "role": "executor", "model": "sonnet", "effort": "medium"}
+{"ts": "2026-10-16T11:20:00", "task_id": "wait:s1:q1", "event": "created", "role": "user-input", "note": "Which storage backend should the cache use?"}
+{"ts": "2026-10-16T11:20:01", "task_id": "wait:s1:q1", "event": "assigned", "role": "user-input"}
+{"ts": "2026-10-16T11:20:02", "task_id": "wait:s1:q1", "event": "started", "role": "user-input"}
+{"ts": "2026-10-16T11:20:03", "task_id": "wait:s1:q1", "event": "blocked", "role": "user-input", "note": "Which storage backend should the cache use?"}
+{"ts": "2026-10-16T11:30:00", "task_id": "t-105", "event": "created", "role": "reviewer", "model": "opus", "note": "Review the auth refactor plan", "effort": "high"}
+{"ts": "2026-10-16T11:30:01", "task_id": "t-105", "event": "assigned", "role": "reviewer", "model": "opus", "effort": "high"}
+{"ts": "2026-10-16T11:45:00", "task_id": "t-106", "event": "created", "role": "executor", "model": "sonnet", "note": "Draft the release checklist", "effort": "low"}
+{"ts": "2026-10-16T11:50:00", "task_id": "t-107", "event": "created", "role": "triage", "model": "haiku", "note": "Extract TODO comments into a list", "effort": "low"}
+{"ts": "2026-10-16T08:00:00", "task_id": "t-108", "event": "created", "role": "executor", "model": "sonnet", "note": "Parse the vendor CSV export", "effort": "medium"}
+{"ts": "2026-10-16T08:00:01", "task_id": "t-108", "event": "assigned", "role": "executor", "model": "sonnet", "effort": "medium"}
+{"ts": "2026-10-16T08:00:02", "task_id": "t-108", "event": "started", "role": "executor", "model": "sonnet", "effort": "medium"}
+{"ts": "2026-10-16T08:25:00", "task_id": "t-108", "event": "failed", "role": "executor", "model": "sonnet", "note": "malformed header on row 1"}
+{"ts": "2026-10-16T08:30:00", "task_id": "t-109", "event": "created", "role": "triage", "model": "haiku", "note": "Rename the legacy module (superseded)", "effort": "low"}
+{"ts": "2026-10-16T08:30:01", "task_id": "t-109", "event": "cancelled", "role": "triage", "model": "haiku", "note": "superseded by t-104"}
+{"ts": "2026-10-13T14:00:00", "task_id": "t-090", "event": "created", "role": "executor", "model": "sonnet", "note": "Profile the slow import path", "effort": "medium"}
+{"ts": "2026-10-13T14:00:01", "task_id": "t-090", "event": "assigned", "role": "executor", "model": "sonnet", "effort": "medium"}
+{"ts": "2026-10-13T14:00:02", "task_id": "t-090", "event": "started", "role": "executor", "model": "sonnet", "effort": "medium"}
+{"ts": "2026-10-12T10:00:00", "task_id": "t-085", "event": "created", "role": "triage", "model": "haiku", "note": "Count public functions without docstrings", "effort": "low"}
+{"ts": "2026-10-12T10:00:01", "task_id": "t-085", "event": "assigned", "role": "triage", "model": "haiku", "effort": "low"}
+{"ts": "2026-10-12T10:00:02", "task_id": "t-085", "event": "started", "role": "triage", "model": "haiku", "effort": "low"}
+{"ts": "2026-10-12T10:08:00", "task_id": "t-085", "event": "completed", "role": "triage", "model": "haiku", "note": "47 functions"}

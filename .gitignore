@@ -12,3 +12,4 @@ assets/_src/**/pal.png
 assets/_src/demo/[fg][0-9]*.png
 assets/_src/chk/
 assets/_src/**/.hyperframes/
+!examples/ledger-sample.jsonl

@@ -58,12 +58,25 @@ LESSONS LEARNED - we already got this wrong before. Read before acting:
   - [inline python in heredoc] heredoc python breaks on Windows quoting; write a temp .py file instead
 ```
 
+## Dashboard
+
+A live board of every dispatch, read from the ledger. It runs on your machine only (127.0.0.1) and changes nothing.
+
+```
+python -m dashboard                 # port from swarmtier.toml (dashboard_port), default 8790
+python -m dashboard --port 9000
+python -m dashboard --ledger path/to/ledger.jsonl
+```
+
+![swarmtier dashboard](assets/dashboard.png)
+
 ## What's inside
 
 | Component | What it does | Cost it prevents |
 |---|---|---|
 | `hooks/require-effort.py` | Blocks any `Agent` call with no `effort`; refuses `max` on Sonnet (configurable) | A subagent silently inheriting the session's effort |
 | `hooks/delegation-ledger.py` | Records every dispatch, wait and failure | Delegation that nobody can audit |
+| `dashboard/` | Live board of every dispatch from the ledger | Delegation nobody can see |
 | `hooks/cold-cache.py` | On the first prompt after an idle gap longer than the cache TTL, says so and counts cold returns per day | Paying the full-context rewrite twice |
 | `hooks/cold-cache-watch.py` | At the end of a big turn, reminds you to checkpoint and `/compact` before stepping away | The rewrite on the way back |
 | `hooks/lesson-inject.py` | Adds up to 3 relevant past lessons to the prompt before the model acts | Repeating a mistake already paid for |

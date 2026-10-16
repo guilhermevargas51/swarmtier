@@ -60,12 +60,25 @@ LESSONS LEARNED - we already got this wrong before. Read before acting:
 
 (As mensagens dos hooks ficam em inglês, porque é o que o modelo lê.)
 
+## Painel
+
+Um quadro ao vivo de cada despacho, lido do ledger. Roda só na sua máquina (127.0.0.1) e não altera nada.
+
+```
+python -m dashboard                 # porta em swarmtier.toml (dashboard_port), padrão 8790
+python -m dashboard --port 9000
+python -m dashboard --ledger caminho/para/ledger.jsonl
+```
+
+![painel do swarmtier](assets/dashboard.png)
+
 ## O que vem dentro
 
 | Componente | O que faz | Custo que evita |
 |---|---|---|
 | `hooks/require-effort.py` | Barra qualquer chamada `Agent` sem `effort`; recusa `max` no Sonnet (configurável) | Subagente herdando em silêncio o effort da sessão |
 | `hooks/delegation-ledger.py` | Registra cada despacho, espera e falha | Delegação que ninguém consegue auditar |
+| `dashboard/` | Quadro ao vivo de cada despacho, lido do ledger | Delegação que ninguém consegue ver |
 | `hooks/cold-cache.py` | No primeiro prompt depois de uma pausa maior que o TTL do cache, avisa e conta as voltas a frio do dia | Pagar duas vezes a reescrita do contexto inteiro |
 | `hooks/cold-cache-watch.py` | No fim de um turno grande, lembra de salvar o estado e rodar `/compact` antes de sair | A reescrita na volta |
 | `hooks/lesson-inject.py` | Anexa ao prompt até 3 lições passadas relevantes, antes de o modelo agir | Repetir um erro já pago |

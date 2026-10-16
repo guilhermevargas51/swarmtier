@@ -31,6 +31,7 @@ DEFAULTS: dict = {
     "cache_watch_min_tokens": 100000,  # Stop reminder to /compact only above this context size
     "exempt_agents": [],            # agents exempt from the require-effort hook
     "data_dir": "",                 # optional; default ~/.swarmtier or $SWARMTIER_HOME
+    "dashboard_port": 8790,         # local port of `python -m dashboard` (127.0.0.1 only)
     "swarm": {
         "max_tokens": 60000,        # mirrors swarm_max_tokens; above ~100k the small-model price tier jumps
         "hard_cap_tokens": 90000,   # refuse anything larger
